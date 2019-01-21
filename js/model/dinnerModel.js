@@ -8,6 +8,11 @@ var DinnerModel = function() {
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 1
 	}
+
+	this.letsDoIt = function() {
+		console.log("apa");
+
+	}
 	
 	this.getNumberOfGuests = function() {
 		//TODO Lab 1
