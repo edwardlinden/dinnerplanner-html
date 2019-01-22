@@ -1,0 +1,154 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>select dish</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script type='text/javascript' src="./js/model/dinnerModel.js"></script>
+    <script src="./js/view/sidebarView.js"></script>
+    <script src="./js/view/dishItemView.js"></script>
+    <script src="./js/view/dishSearchView.js"></script>
+
+    <style>
+        li{
+            display: inline-block;
+
+            padding-right:10px;
+        }
+        ul{
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+
+<body>
+<section>
+    <div class="container" id="centerit">
+        <h1>Welcome to the Dinner little baby girl</h1>
+
+    </div>
+</section>
+<hr/>
+
+
+<div class="container">
+    <div class="row">
+        <!-- left column  -->
+        <div class="col-12 col-md-6 col-xl-4 borderline" >
+            <div class="d-flex flex-column justify-content-between p-3" id="sidebarView">
+                <h3> My dinner</h3>
+                <div class="row">
+                    <div class= col>
+                        <h5>People </h5>
+                    </div>
+
+                    <div>
+                        <h5 id="numberOfGuests"></h5>
+                    </div>
+                    <div>
+                        <button id="minusGuest" class="btn"><h4>-</h4></button>
+                        <button id="plusGuest" class="btn"><h4>+</h4></button>
+                    </div>
+
+                </div>
+            </div>
+            <hr/>
+            <div>
+
+                <div class = "row">
+                    <div class = "col">
+                        <h5>Dish name</h5>
+                    </div>
+                    <div class = "col-2">
+                        <h5>cost</h5>
+                    </div>
+                </div>
+                <hr/>
+                <div class = "row">
+                    <div class = "col">
+                        <h5 style="color:red">A toast</h5>
+                    </div>
+                    <div class = "col-2">
+                        <h5 style="color:red">109</h5>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+
+            <div class="redmoney"><h5>SEK 109.00</h5></div>
+            <div class="littlebutton">
+                <button type="button" class="btn btn-primary btn-sm">Confirmt it</button>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+        <!-- right column -->
+
+        <!-- navbar -->
+
+        <div class="col-12 col-md-6 col-xl-8" id="dishSearchView">
+            <div  class="borderline">
+                <h5> Find a dish </h5>
+                <nav class="navbar navbar-light bg-light justify-content-between">
+
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Enter key words" aria-label="Search">
+                    </form>
+
+                    <form class="form-inline">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                All
+                            </button>
+                        </div>
+                    </form>
+
+                    <form class="form-inline">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </nav>
+            </div>
+            <!-- pics of food -->
+            <div class="d-flex flex-column align-items-end justify-content-between p-3 borderline">
+                <div class="container">
+                    <div class="row">
+                        <ul id="dishList" style="display: inline;">
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+<!-- The application JavaScript code -->
+<script src="js/app.js"></script>
+
+<!-- TODO: Here you should include JS code for your other views -->
+</body>
+</html>

@@ -4,26 +4,18 @@ var DinnerModel = function() {
 	//TODO Lab 1 implement the data structure that will hold number of guest
 	// and selected dishes for the dinner menu
 
-
+	var numberOfGuests=0;
+	var dishOfInterest=0;
 	this.setNumberOfGuests = function(num) {
-		//TODO Lab 1 kolla på detta
+        numberOfGuests=num;
 
-		$(document).ready(function(){
-		    $('.count').prop('disabled', true);
-   			$(document).on('click','.plus',function(){
-				$('.count').val(parseInt($('.count').val()) + 1 );
-    		});
-        	$(document).on('click','.minus',function(){
-    			$('.count').val(parseInt($('.count').val()) - 1 );
-    				if ($('.count').val() == 0) {
-						$('.count').val(1);
-					}
-    	    	});
- 		});
+        if(num<0){
+			numberOfGuests=0;
+		}
 	}
 	
 	this.getNumberOfGuests = function() {
-		//TODO Lab 1
+		return numberOfGuests;
 	}
 
 	//Returns the dish that is on the menu for selected type 
@@ -57,6 +49,13 @@ var DinnerModel = function() {
 		//TODO Lab 1
 	}
 
+	this.setDishOfInterest = function(id){
+		dishOfInterest=id;
+	};
+
+    this.getDishOfInterest = function(){
+        return dishOfInterest;
+    };
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	//if you don't pass any filter all the dishes will be returned
@@ -87,6 +86,7 @@ var DinnerModel = function() {
 			}
 		}
 	}
+
 
 
 	// the dishes variable contains an array of all the 
@@ -339,5 +339,12 @@ var DinnerModel = function() {
 			}]
 		}
 	];
+
+    this.getDishWithoutID=function(index){
+    	if(index===4){
+    		index=8;
+		}
+        return dishes[index];
+    }
 
 }

@@ -12,7 +12,7 @@
  * @param {jQuery object} container - references the HTML parent element that contains the view.
  * @param {Object} model - the reference to the Dinner Model
  */ 
-var ExampleView = function (container, model) {
+var sidebarView = function (container, model) {
 	
 	/**
 	 * We use the @method find() on @var {jQuery object} container to look for various elements 
@@ -47,12 +47,28 @@ var ExampleView = function (container, model) {
 	 */
 	this.plusButton = container.find("#plusGuest");
 	this.minusButton = container.find("#minusGuest");
-	
+
+	this.plusButton.click(function(){
+        model.setNumberOfGuests(parseInt(numberOfGuests.html())+1);
+        numberOfGuests.html(model.getNumberOfGuests());
+	});
+
+    this.minusButton.click(function(){
+        model.setNumberOfGuests(parseInt(numberOfGuests.html())-1);
+        numberOfGuests.html(model.getNumberOfGuests());
+    });
+	/*this.plusButton ).on( "click", function() {
+        model.setNumberOfGuests(parseInt(numberOfGuests.html())+1);
+        numberOfGuests.html(model.getNumberOfGuests());
+    });*/
+	//this.plusButton.addEventListener(function(){
+	//	model.getNumberOfGuests();
+	//});
 	/**
 	 * Here we use @var {jQuery object} numberOfGuests that is a reference to <span>
 	 * in our view to dynamically set it's value to "Hello World".
 	 */
-	numberOfGuests.html("Hello World");
+	numberOfGuests.html(model.getNumberOfGuests());
 	
 }
  
