@@ -1,3 +1,3 @@
 function myfunction() {
-    alert("hello");
+    alert("Now you click")
 }

@@ -14,33 +14,22 @@
 
     </head>
     <body>
-    <div class="container">
+    <div class="container" id="centerit">
         <h1>Welcome to the Dinner baby</h1>
         <p>Here you will be if a dinner is supposed to be served, within a couple of days or hours.</p>
-       <script language="javascript"src="/js/model/dinnerModel.js">
-       var mydinnermodel = new DinnerModel();
-       console.log(mydinnermodel);
-
-       </script>
-       <button type="button" class="btn btn-primary" onclick="mydinnermodel.letsDoIt()" >Lets do it shall we?</button>
+       
+        
+       <button id="myButton" type="button" class="btn btn-primary" onclick="myfunction()" >Lets do it shall we?</button>
+       <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+            location.href = "/index.html";
+        };
+         </script>
     
-        <div class="row">
-          <div class="col-sm">
-            One of three columns
-          </div>
-          <div class="col-sm">
-            One of three columns
-          </div>
-          <div class="col-sm">
-            One of three columns
-          </div>
-        </div>
-     
+        
           
     </div>
-
- 
-  
- 
+    
+       
    
 </body></html>
