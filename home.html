@@ -6,23 +6,24 @@
     <title>Home</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <link href="styles/style.css" rel="stylesheet" type="text/css"></link> 
     <script type='text/javascript' src="/js/model/dinnerModel.js"></script>
     <script type='text/javascript' src="/js/myjavascript.js"></script>
 
     </head>
+
+
     <body>
     <div class="container" id="centerit">
         <h1>Welcome to the Dinner baby</h1>
         <p>Here you will be if a dinner is supposed to be served, within a couple of days or hours.</p>
        
         
-       <button id="myButton" type="button" class="btn btn-primary" onclick="myfunction()" >Lets do it shall we?</button>
-       <script type="text/javascript">
+       <button id="myButton" class="btn btn-primary centerbutton" onclick="myfunction()" >Lets do it shall we?</button>
+       <script>
         document.getElementById("myButton").onclick = function () {
-            location.href = "/index.html";
+            location.href = "/select_dish.html";
         };
          </script>
     
