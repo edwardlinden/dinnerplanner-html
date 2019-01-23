@@ -5,8 +5,8 @@
 	// And create the instance of ExampleView
 	var sideBarView = new sidebarView($("#sidebarView"), model);
 	var dishSearchView = new dishSearchView($("#dishSearchView"), model);
-
-
+	var dishGetImageView = new dishGetImageView($("#dishGetImageView"), model);
+console.log("hello")
 	/**
 	 * IMPORTANT: app.js is the only place where you are allowed to
 	 * use the $('someSelector') to search for elements in the whole HTML.

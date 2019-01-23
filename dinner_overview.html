@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>select dish</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <script type='text/javascript' src="./js/model/dinnerModel.js"></script>
+    <script src="./js/view/sidebarView.js"></script>
+    <script src="./js/view/dishItemView.js"></script>
+    <script src="./js/view/dishSearchView.js"></script>
+    <script src="./js/view/dishGetImageView.js"></script>
+
+    <style>
+        li{
+            display: inline-block;
+
+            padding-right:10px;
+        }
+        ul{
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<!-- header -->
+<body>
+<section>
+    <div class="container" id="centerit">
+        <a href="./home.html"><h1>Dinner Planner</h1></a>
+    </div>
+</section>
+<hr/>
+
+
+<div class="container">
+
+        <div>
+                <div class = "row">
+                    <div class = "col">
+                        <h3>My Dinner 3 People</h3>
+                    </div>
+                    <div class = "col-2">
+                            <a href="select_dish_again.html"><button type="button" class="btn btn-primary btn-sm">back and edit dinner</button></a>
+                    </div>
+                </div>
+                <hr/>
+        </div>
+
+
+    <div>
+
+    <!-- pics of food -->
+    <div class = "row borderline">
+        <div class = "col">
+        </div>
+
+        <div class = "col-6">
+
+        <div id="dishGetImageView">
+            <div class="d-flex flex-column p-3" >
+                <div class="container">
+                    <div class="row d-block" id="centerit">    
+                        <ul id="dishList" style="display: inline;">  
+                        </ul>
+                        
+                    </div>
+                </div> 
+                <div class="row justify-content-center" style="color:red">
+                
+                        <div class = "col col-lg-2" >    <p>77 SEK</p>  </div>
+                        <div class = "col-md-auto" >     <p>77 SEK</p>  </div>
+                        <div class = "col col-lg-2" >     <p>77 SEK</p>  </div>
+                
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+        <div class = "col" >
+            <p class = "bottom-align-text">Total</p>
+            <p class = "bottom-align-text2" style="color:red">341 SEK</p>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="littlebutton"> <a href="dinner_printout.html"><button type="button" class="btn btn-primary btn-sm">print full recipe</button></a></div>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+<!-- The application JavaScript code -->
+<script src="js/app.js"></script>
+
+<!-- TODO: Here you should include JS code for your other views -->
+</body>
+</html>

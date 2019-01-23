@@ -76,3 +76,29 @@ div.redmoney {
 .littlebuttonleft {
     text-align: left;
 }
+
+/* vertical line break */
+div.vertical-line{
+    width: 1px;
+    background-color: silver;
+    height: 100%;
+    float: left;
+    border: 2px ridge silver ;
+    border-radius: 2px;
+    text-align: left
+  }
+
+  /* down text align */
+  .bottom-align-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+  }
+  /* down text align 2 */
+  .bottom-align-text2 {
+    position: absolute;
+    bottom: 0;
+    left: 40;
+
+  }
