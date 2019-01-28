@@ -67,6 +67,10 @@ div.redmoney {
     color: red;
 }
 
+#redcolor {
+    color: red;
+}
+
 /* center align button */
 .littlebutton {
     text-align: center;
