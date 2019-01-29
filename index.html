@@ -12,25 +12,62 @@
     <script src="js/view/sidebarView.js"></script>
 
 </head>
+
 <body>
-<div class="container">
-	<h1>Dinner planner</h1>
-	<div id="sidebarView">
-		<div>
-			Number of guests: <span id="numberOfGuests"></span>
+		<div class="container" id="centerit">
+		<h1>Dinner Planner</h1>
 		</div>
-		<div>
-			<button id="minusGuest" class="btn"><h3 style="color:black">-</h3></button>
-			<button id="plusGuest" class="btn"><h3>-</h3></button>
-		</div>
+
+
+	<!-- Home view -->
+	<div class="container" id="homeView">
+		<div class="container">
+				<p>Dinner usually refers to the most significant meal of the day, 
+				which can be at noon or in the evening. However, the term "dinner" 
+				can have different meanings depending on culture, as it may mean a 
+				meal of any size eaten at any time of day. Historically, it referred 
+				to the first meal of the day eaten around noon, and is still sometimes
+					used for a noon-time meal, particularly if it is a large or main meal. 
+					In many parts of the Western world, dinner is taken as the evening meal.
+				</p>
+		</div>       
+		<button id="enter" class="btn btn-primary">
+		Enter
+		</button>
+			
 	</div>
-</div>
 
 
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
 <!-- The application JavaScript code -->
 <script src="js/app.js"></script>
-<
+<script src="js/model/dinnerModel.js"></script>
+<script src="js/view/homeView.js"></script>
+<script src="js/controller/homeController.js"></script>
+
+<!-- <script src="js/view/sidebarView.js"></script>
+<script src="js/view/pageView.js"></script>
+<script src="js/view/dishView.js"></script>
+<script src="js/view/dishItemView.js"></script>
+<script src="js/view/dishDetailView.js"></script>
+<script src="js/view/homeView.js"></script>
+<script src="js/view/overView.js"></script>
+<script src="js/view/infoView.js"></script>
+<script src="js/view/printOutView.js"></script>
+
+<script src="js/controller/dishController.js"></script>
+<script src="js/controller/dishDetailsController.js"></script>
+<script src="js/controller/sidebarController.js"></script>
+<script src="js/controller/pageController.js"></script>
+<script src="js/controller/overViewController.js"></script>
+<script src="js/controller/infoController.js"></script>'
+<script src="js/controller/dishItemController.js"></script> -->
+
 <!-- TODO: Here you should include JS code for your other views -->
 </body>
 </html>
