@@ -1,30 +1,93 @@
 $(function() {
-
-
 	//We instantiate our model
 	var model = new DinnerModel();
-	
-	// And create the instance of ExampleView
+
+	this.type = "All dishes";
+	this.filter = "";
+
+	var welcome = $("#welcomeView");
+	var dishSearch = $("#dishSearchView");
+	var sidebar = $("#sidebarView");
+	var notConfirmDinner = $("#notConfirmDinner");
+	this.dinnerConfirm = $("#dinnerConfirm");
+	var detailsDish = $("#detailsDishView");
+	var dishes = $("#dishView");
+	var dinneroverview = $("#dinnerOverView");
+	var dinnerprintout = $("#dinnerPrintOutView");
+	var dinnerOverView = $("#dinnerOverView");
+
+	var welcomeView = new WelcomeView(welcome, model);
+	new WelcomeController(welcomeView, model, this);
+
+	var sidebarView = new SidebarView(sidebar, model);
+	new SidebarController(sidebarView, model, this);
+
+	var dishSearchView = new DishSearchView(dishSearch, model);
+	new DishSearchController(dishSearchView, model, this);
+
+	var dishView = new DishView(dishes, model, this);
+	new DishController(dishView, model, this);
+
+	var detailsDishView = new DetailsDishView(detailsDish, model);
+	new DetailsDishController(detailsDishView, model, this);
+
+	var overView = new OverView(dinnerOverView, model);
+	new OverViewController(overView, model, this);
+
+	new PrintOutView(dinnerprintout, model);
 
 
+	// show or hide all screens
+	this.showSelectDishScreen = function(){
+		dishSearch.show();
+		sidebar.show();
+		welcome.hide();
+		detailsDish.hide();
+		dishes.hide();
+		this.dinnerConfirm.hide();
+	}
 
-	var home = $("#homeView");
-	var homeV = new homeView(home, model);
-	var homeC = new homeController(homeV, model, this);
+	this.showDishScreen = function(){
+		dishes.show();
+		dishView.displayDishes(this.type, this.filter);
+	}
 
+	this.showDishDetailsScreen= function(){
+		dishSearch.hide();
+		sidebar.show();
+		welcome.hide();
+		detailsDish.show();
+		detailsDishView.displayDish();
+	}
 
+	this.showSelectDishAgainScreen= function(){
+		dishSearch.show();
+		sidebar.show();
+		welcome.hide();
+		detailsDish.hide();
+		dishes.hide();
+		dinneroverview.hide();
+		this.dinnerConfirm.show();
+		notConfirmDinner.hide();
 
+}
+this.showDinnerOverviewScreen= function(){
+		dishSearch.hide();
+		sidebar.hide();
+		detailsDish.hide();
+		dishes.hide();
+		dinneroverview.show();
+	}
 
+this.showDinnerPrintOutScreen= function(){
+		dinneroverview.hide();
+		dinnerprintout.show();
+	}
+		dishSearch.hide();
+		sidebar.hide();
+		detailsDish.hide();
+		dinneroverview.hide();
+		dinnerprintout.hide();
 
-// 	var sideBarView = new sidebarView($("#sidebarView"), model);
-// 	var dishSearchView = new dishSearchView($("#dishSearchView"), model);
-// 	var dishGetImageView = new dishGetImageView($("#dishGetImageView"), model);
-// console.log("hello")
-	/**
-	 * IMPORTANT: app.js is the only place where you are allowed to
-	 * use the $('someSelector') to search for elements in the whole HTML.
-	 * In other places you should limit the search only to the children 
-	 * of the specific view you're working with (see sidebarView.js).
-	 */
 
 });

@@ -1,1 +1,0 @@
-var rootInfo = document.getELementById("dishSearchView");
