@@ -22,6 +22,9 @@ var PrintOutView = function (container, model){
       +menu[i].name+"</h3></div><div class='panel-body'>"
       +ingrStr+"</div></div> </div><div class='col-xs-12 col-sm-4'><div><h4>PREPARATIONS</h4><div>"
       +menu[i].description+"</div></div>  </div></div>";
+
+
+      
     }
     container.append(myHTML);
   }
