@@ -26,6 +26,7 @@ $(function() {
 	new DishSearchController(dishSearchView, model, this);
 
 	var dishView = new DishView(dishes, model, this);
+	new DishController(dishView, model, this);
 
 	var detailsDishView = new DetailsDishView(detailsDish, model);
 	new DetailsDishController(detailsDishView, model, this);
@@ -56,7 +57,7 @@ $(function() {
 		sidebar.show();
 		welcome.hide();
 		detailsDish.show();
-		detailsDishView.displayDish();
+		//detailsDishView.displayDish();
 	}
 
 	this.showSelectDishAgainScreen= function(){

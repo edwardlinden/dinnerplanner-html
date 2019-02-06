@@ -16,6 +16,7 @@
 	<div class="container centerit">
 		<a href>
 			<h1 >Dinner Planner</h1>
+			
 		</a>	
 			<!-- Welcome View	 -->
 			<div class="container" id=welcomeView>
@@ -85,10 +86,21 @@
         <span class="input-group-btn">
           <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="#">Choose food<span class="caret"></span></a>
           <ul class="dropdown-menu" id="dropdown-menu-page">
-            <li><a href="#" >All dishes</a></li>
+            <li><a href="#" >all</a></li>
+            <li><a href="#" >antipasti</a></li>
+            <li><a href="#" >beverage</a></li>
+            <li><a href="#" >breakfast</a></li>
+            <li><a href="#" >brunch</a></li>
+            <li><a href="#" >condiment</a></li>
+            <li><a href="#" >dessert</a></li>
+            <li><a href="#" >dip</a></li>
+            <li><a href="#" >drink</a></li>
             <li><a href="#" >starter</a></li>
             <li><a href="#" >main dish</a></li>
-            <li><a href="#" >dessert</a></li>
+            <li><a href="#" >morning meal</a></li>
+            <li><a href="#" >salad</a></li>
+            <li><a href="#" >snack</a></li>
+            <li><a href="#" >side dish</a></li>
           </ul>
           <button id="searchDish" type="button"class="btn btn-default">Go!</button>
         </span>
@@ -97,6 +109,7 @@
 
       <!-- DishView -->
       <div id="dishView">
+					<span id="dishes"></span>
       </div>
 
     </div>
@@ -190,17 +203,16 @@
   <script src="js/view/sidebarView.js"></script>
   <script src="js/view/dishSearchView.js"></script>
   <script src="js/view/dishView.js"></script>
-  <script src="js/view/dishItemView.js"></script>
   <script src="js/view/detailsDishView.js"></script>
   <script src="js/view/welcomeView.js"></script>
   <script src="js/view/overView.js"></script>
   <script src="js/view/printOutView.js"></script>
-  <script src="js/controller/welcomeController.js"></script>
+	<script src="js/controller/welcomeController.js"></script>
+	<script src="js/controller/dishController.js"></script>
   <script src="js/controller/detailsDishController.js"></script>
   <script src="js/controller/sidebarController.js"></script>
   <script src="js/controller/dishSearchController.js"></script>
   <script src="js/controller/overViewController.js"></script>
-  <script src="js/controller/dishItemController.js"></script>
 
 </body>
 </html>

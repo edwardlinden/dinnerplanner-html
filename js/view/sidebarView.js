@@ -17,8 +17,8 @@ var SidebarView = function (container, model) {
 	  var menu = model.getFullMenu();
 	  for(i in menu){
 		var dish = menu[i];
-		var dishName = dish.name;
-		var dishPrice = model.getDishPrice(dish.ingredients);
+		var dishName = dish.title;
+		var dishPrice = model.getDishPrice(dish.extendedIngredients);
 		totMenuPrice += dishPrice;
 		myHTML += '<li><div class="col-xs-8 font8">'
 		+dishName+'</div></li><li><div class="col-xs-4 font8">'

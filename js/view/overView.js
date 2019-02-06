@@ -17,11 +17,11 @@ var OverView = function (container, model){
   
       for(i in fullMenu){
         var dish = fullMenu[i];
-        var dishPrice = model.getDishPrice(dish.ingredients);
+        var dishPrice = model.getDishPrice(dish.extendedIngredients);
         menuPrice += dishPrice;
-        myHTML += "<div class='col-sm-4'> <a href='#' class='thumbnail'> <img src='images/"
+        myHTML += "<div class='col-sm-4'> <a href='#' class='thumbnail'> <img src='"
         +dish.image+"'><div class='caption'><span>"
-        +dish.name+ "</span><div class='redmoney'> <span>"
+        +dish.title+ "</span><div class='redmoney'> <span>"
         +dishPrice+" SEK</span></div></div></a></div>";
       }
       overViewName.html("My dinner: "+ model.getNumberOfGuests()+" people");

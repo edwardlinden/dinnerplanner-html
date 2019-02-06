@@ -7,8 +7,7 @@ var DetailsDishController = function (view, model, app) {
       });
   
     view.addtomenu.click(function(){
-      var id = model.getDishId();
-      var dish = model.getDish(id);
+      var dish = model.getCurrentDish();
       model.addDishToMenu(dish);
       app.showSelectDishAgainScreen();
       app.showDishScreen();
