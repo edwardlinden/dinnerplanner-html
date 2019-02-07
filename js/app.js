@@ -4,6 +4,7 @@ $(function() {
 
 	this.type = "All dishes";
 	this.filter = "";
+	this.alt = "";
 
 	var welcome = $("#welcomeView");
 	var dishSearch = $("#dishSearchView");

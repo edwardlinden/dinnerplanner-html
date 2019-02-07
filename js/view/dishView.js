@@ -28,7 +28,9 @@
   
         }
       },
-
+      function(error) {
+        alert("Check your connection!");
+      }
       );
   
     }

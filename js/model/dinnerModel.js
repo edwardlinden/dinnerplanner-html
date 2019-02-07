@@ -77,7 +77,7 @@ var DinnerModel = function(amountOfGuests, type) {
 	// you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	// if you don't pass any filter all the dishes will be returned
 
-	this.getAllDishes = function (type, filter, callback) {
+	this.getAllDishes = function (type, filter, callback, callBackError) {
 
     $.ajax( {
       url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?query='+type+','+filter,
@@ -85,18 +85,18 @@ var DinnerModel = function(amountOfGuests, type) {
         'X-Mashape-Key': '3d2a031b4cmsh5cd4e7b939ada54p19f679jsn9a775627d767'
 			},
       success: function(data) {
-				
+
         callback(data);
       },
-      error: function() {
-				alert("please check your connection!");
+      error: function(error) {
+				callBackError(error);
       }
     })
   }
 
 
 	// function that returns a dish of specific ID	
-	this.getDish = function (id, callback,) {
+	this.getDish = function (id, callback, callBackError) {
 
     $.ajax( {
       url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/'+id+'/information',
@@ -107,9 +107,8 @@ var DinnerModel = function(amountOfGuests, type) {
       success: function(data) {
         callback(data);
       },
-      error: function() {
-
-				alert("please check your connection!");
+      error: function(error) {
+				callBackError(error);
 				
       }
     })

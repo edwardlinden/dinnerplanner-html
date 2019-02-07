@@ -1,8 +1,9 @@
 var DetailsDishView = function(container, model){
-
+    
     this.backtoselectdish = container.find("#backtoselectdish");
     this.addtomenu = container.find("#addtomenu");
     var dishIngredients = container.find("#dishIngredients");
+
     var img = container.find("#img");
     var dishCaption = container.find("#dishCaption");
     var dishDescription = container.find("#dishDescription");
@@ -17,6 +18,7 @@ var DetailsDishView = function(container, model){
       img.html("<div class='loader'></div>");
       var num = model.getNumberOfGuests();
       var dish = model.getCurrentDish();
+      console.log(dish);
       var myHTML = '';
       var totPrice = 0;
   
